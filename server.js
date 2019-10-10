@@ -19,11 +19,8 @@ app.use(function (err, req, res, next) {
     // render the error page
     res.status(err.status || 500)
     res.render('error', { message: err.message, error: err });
-  })
+});
   
 const server = app.listen(process.env.PORT || 3000, function () {
     console.log('Сервер запущен на порте: ' + server.address().port);
-})
-// app.listen(3000, function () {
-//     console.log('Example app listening on port 3000!');
-// });
+});
